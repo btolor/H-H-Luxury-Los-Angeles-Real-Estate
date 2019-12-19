@@ -1,0 +1,283 @@
+/* Import the mixins collection file... */
+body {
+  position: relative;
+}
+
+body .header {
+  background: black;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3% 2.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .header .logo-section {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header .logo-section {
+    -webkit-box-flex: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4;
+    text-align: center;
+  }
+}
+
+body .header .logo-section img {
+  width: 330px;
+}
+
+body .header .mobile-open {
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header .mobile-open {
+    display: block;
+  }
+}
+
+body .header .mobile-open a {
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .header .mobile-open a:hover {
+  color: red;
+}
+
+body .header .menu-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header .menu-section {
+    display: none;
+  }
+}
+
+body .header .menu-section .menu a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .header .menu-section .menu a:hover {
+  border-bottom: 1px solid red;
+  padding-bottom: 14px;
+}
+
+body .header .menu-section .menu .active {
+  border-bottom: 1px solid red;
+  padding-bottom: 14px;
+}
+
+body .header .menu-section .schedule {
+  padding-left: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header .menu-section .schedule {
+    display: none;
+  }
+}
+
+body .header .menu-section .schedule a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid white;
+  padding: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .header .menu-section .schedule a:hover {
+  background: white;
+  background-color: white;
+  color: red;
+}
+
+body .mobile-menu {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+body .mobile-menu .slide-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  height: 100vh;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  padding-top: 4%;
+  padding-bottom: 10%;
+}
+
+body .mobile-menu .slide-menu .closing {
+  padding-bottom: 18%;
+  padding-left: 6%;
+}
+
+body .mobile-menu .slide-menu .closing a {
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-left: 3%;
+}
+
+body .mobile-menu .slide-menu .closing a:hover {
+  color: red;
+}
+
+body .mobile-menu .slide-menu .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: spcae-between;
+      -ms-flex-pack: spcae-between;
+          justify-content: spcae-between;
+  padding-left: 9%;
+}
+
+body .mobile-menu .slide-menu .links a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .mobile-menu .slide-menu .links a:hover {
+  border-left: 1px solid red;
+  padding-left: 6%;
+}
+
+body .mobile-menu .slide-menu .links .active {
+  border-left: 1px solid red;
+  padding-left: 6%;
+}
+
+body .mobile-menu .slide-menu .schedule {
+  padding-top: 10%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+
+body .mobile-menu .slide-menu .schedule a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid white;
+  padding: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .mobile-menu .slide-menu .schedule a:hover {
+  background: white;
+  background-color: white;
+  color: red;
+}
+
+body .main-img {
+  background-image: url("../images/main-img.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 20% 0 15%;
+}
+
+body .main-img #main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+body .main-img .schedule {
+  padding-top: 8%;
+}
+
+body .main-img .schedule a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid white;
+  padding: 1% 6%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .main-img .schedule a:hover {
+  background: white;
+  background-color: white;
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */
