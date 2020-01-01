@@ -16,10 +16,16 @@ body .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 3% 2.5%;
+  padding: 3% 11%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header {
+    padding: 2.5% 11% 3%;
+  }
 }
 
 body .header .logo-section {
@@ -40,13 +46,25 @@ body .header .logo-section img {
   width: 330px;
 }
 
+@media screen and (max-width: 1024px) {
+  body .header .logo-section img {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  body .header .logo-section img {
+    width: 200px;
+  }
+}
+
 body .header .mobile-open {
   display: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
   body .header .mobile-open {
     display: block;
   }
@@ -58,6 +76,12 @@ body .header .mobile-open a {
   font-size: 26px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 460px) {
+  body .header .mobile-open a {
+    font-size: 24px;
+  }
 }
 
 body .header .mobile-open a:hover {
@@ -82,7 +106,7 @@ body .header .menu-section {
   transition: 0.3s;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
   body .header .menu-section {
     display: none;
   }
@@ -92,7 +116,7 @@ body .header .menu-section .menu a {
   text-decoration: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin-right: 15px;
@@ -116,7 +140,7 @@ body .header .menu-section .schedule {
   transition: 0.3s;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
   body .header .menu-section .schedule {
     display: none;
   }
@@ -126,7 +150,7 @@ body .header .menu-section .schedule a {
   text-decoration: none;
   font-family: sans-serif;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   border: 1px solid white;
   padding: 16px;
@@ -255,7 +279,7 @@ body .main-img {
 body .main-img #main-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 900;
 }
 
@@ -279,5 +303,524 @@ body .main-img .schedule a:hover {
   background: white;
   background-color: white;
   color: red;
+}
+
+body .featured-grid .container {
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .featured-grid .container .info-sec {
+  width: 33.33%;
+  padding-left: 2.5%;
+}
+
+@media screen and (max-width: 1024px) {
+  body .featured-grid .container .info-sec {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .featured-grid .container .info-sec {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+body .featured-grid .container .info-sec #divider {
+  padding-top: 15%;
+  width: 25%;
+  border-bottom: 3px solid red;
+}
+
+@media screen and (max-width: 768px) {
+  body .featured-grid .container .info-sec #divider {
+    margin: 0 auto;
+    padding-top: 10%;
+  }
+}
+
+body .featured-grid .container .info-sec #top-title {
+  padding-top: 12%;
+}
+
+body .featured-grid .container .info-sec #bottom-title {
+  padding-bottom: 14%;
+}
+
+body .featured-grid .container .info-sec .feature-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: .9;
+}
+
+@media screen and (max-width: 1200px) {
+  body .featured-grid .container .info-sec .feature-title {
+    font-size: 32px;
+  }
+}
+
+body .featured-grid .container .info-sec .listings-action {
+  padding-bottom: 15%;
+}
+
+body .featured-grid .container .info-sec .listings-action a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid red;
+  padding: 16px 20%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .featured-grid .container .info-sec .listings-action a:hover {
+  background: red;
+  background-color: red;
+  color: white;
+}
+
+body .featured-grid .container .listing {
+  width: 33.33%;
+  text-align: center;
+  background: yellow;
+  height: 330px;
+  vertical-align: text-bottom;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@media screen and (max-width: 1200px) {
+  body .featured-grid .container .listing {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body .featured-grid .container .listing {
+    width: 50%;
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .featured-grid .container .listing {
+    width: 100%;
+  }
+}
+
+body .featured-grid .container .listing .filter {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 16px;
+}
+
+body .featured-grid .container .listing .filter h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 1200px) {
+  body .featured-grid .container .listing .filter h4 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body .featured-grid .container .listing .filter h4 {
+    font-size: 28px;
+  }
+}
+
+body .featured-grid .container .listing .filter h4 span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+  body .featured-grid .container .listing .filter h4 span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body .featured-grid .container .listing .filter h4 span {
+    font-size: 20px;
+  }
+}
+
+body .featured-grid .container .one {
+  background-image: url("../images/f1.jpg");
+  background-size: 100% 100%;
+}
+
+body .featured-grid .container .two {
+  background-image: url("../images/f2.jpg");
+  background-size: 100% 100%;
+}
+
+body .featured-grid .container .three {
+  background-image: url("../images/f3.jpg");
+  background-size: 100% 100%;
+}
+
+body .featured-grid .container .four {
+  background-image: url("../images/f4.jpg");
+  background-size: 100% 100%;
+}
+
+body .featured-grid .container .five {
+  background-image: url("../images/f5.jpg");
+  background-size: 100% 100%;
+}
+
+body .contacts-sec .container {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 3% 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+  body .contacts-sec .container {
+    text-align: center;
+    padding: 4% 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body .contacts-sec .container {
+    width: 85%;
+  }
+}
+
+body .contacts-sec .container h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+  body .contacts-sec .container h3 {
+    width: 50%;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body .contacts-sec .container h3 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .contacts-sec .container h3 {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+body .contacts-sec .container a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 900px) {
+  body .contacts-sec .container a {
+    width: 50%;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body .contacts-sec .container a {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .contacts-sec .container a {
+    width: 100%;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+body .contacts-sec .container a .fa {
+  padding-right: 10px;
+}
+
+body .contacts-sec .container a:hover {
+  color: red;
+}
+
+body .team-img {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+body .team-img img {
+  width: 100%;
+  height: 700px;
+}
+
+@media screen and (max-width: 800px) {
+  body .team-img img {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  body .team-img img {
+    height: 400px;
+  }
+}
+
+body .team-img .meet-sec {
+  background: white;
+  background-color: white;
+  position: absolute;
+  right: 200px;
+  bottom: -125px;
+  width: 36%;
+  padding-left: 2.5%;
+}
+
+@media screen and (max-width: 1024px) {
+  body .team-img .meet-sec {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .team-img .meet-sec {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: -125px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  body .team-img .meet-sec {
+    width: 100%;
+    margin-top: -100px;
+  }
+}
+
+body .team-img .meet-sec #divider {
+  padding-top: 10%;
+  width: 25%;
+  border-bottom: 3px solid red;
+}
+
+@media screen and (max-width: 768px) {
+  body .team-img .meet-sec #divider {
+    margin: 0 auto;
+  }
+}
+
+body .team-img .meet-sec #title {
+  padding: 6% 0;
+}
+
+body .team-img .meet-sec .feature-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+@media screen and (max-width: 1200px) {
+  body .team-img .meet-sec .feature-title {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .team-img .meet-sec .feature-title {
+    text-align: center;
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  body .team-img .meet-sec .feature-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+body .team-img .meet-sec .meet-action {
+  padding-bottom: 15%;
+}
+
+@media screen and (max-width: 768px) {
+  body .team-img .meet-sec .meet-action {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+body .team-img .meet-sec .meet-action a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid red;
+  padding: 14px 18%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 564px) {
+  body .team-img .meet-sec .meet-action a {
+    font-size: 14PX;
+    padding: 14px 10%;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  body .team-img .meet-sec .meet-action a {
+    font-size: 14PX;
+    padding: 14px 10%;
+  }
+}
+
+body .team-img .meet-sec .meet-action a:hover {
+  background: red;
+  background-color: red;
+  color: white;
+}
+
+body .highlight-listing {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-image: url("../images/main-img.jpg");
+  background-size: 100% 100%;
+  padding: 10% 0 0 12%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  body .highlight-listing {
+    margin-top: 8%;
+    padding-top: 14%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .highlight-listing {
+    margin-top: -8%;
+  }
+}
+
+body .highlight-listing h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+body .highlight-listing h1 {
+  font-weight: 700;
+  font-size: 48px;
+  padding: 2% 0;
+}
+
+@media screen and (max-width: 768px) {
+  body .highlight-listing h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  body .highlight-listing h1 {
+    font-size: 30px;
+  }
+}
+
+body .highlight-listing span {
+  font-size: 17px;
+  font-weight: 500;
+  padding-bottom: .5%;
+}
+
+body .highlight-listing #price {
+  font-weight: 800;
+}
+
+body .highlight-listing a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid white;
+  margin-top: 3%;
+  text-align: center;
+  padding: 1% 12%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=main.css.map */
