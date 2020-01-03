@@ -16,7 +16,7 @@ body .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 3% 11%;
+  padding: 3% 6%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -43,7 +43,7 @@ body .header .logo-section {
 }
 
 body .header .logo-section img {
-  width: 330px;
+  width: 300px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -283,6 +283,12 @@ body .main-img #main-title {
   font-weight: 900;
 }
 
+@media screen and (max-width: 600px) {
+  body .main-img #main-title {
+    font-size: 36px;
+  }
+}
+
 body .main-img .schedule {
   padding-top: 8%;
 }
@@ -421,6 +427,12 @@ body .featured-grid .container .listing {
 @media screen and (max-width: 768px) {
   body .featured-grid .container .listing {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body .featured-grid .container .listing {
+    height: 280px;
   }
 }
 
@@ -746,6 +758,11 @@ body .team-img .meet-sec .meet-action a:hover {
 
 body .highlight-listing {
   margin-top: 5%;
+  background-image: url("../images/parkington-place.jpg");
+  background-size: 100% 100%;
+}
+
+body .highlight-listing .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -755,60 +772,59 @@ body .highlight-listing {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-image: url("../images/lease-property5.jpg");
-  background-size: 100% 100%;
+  background: rgba(0, 0, 0, 0.6);
   padding: 14% 0 10% 12%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
 }
 
 @media screen and (max-width: 1000px) {
-  body .highlight-listing {
+  body .highlight-listing .container {
     margin-top: 8%;
     padding-top: 14%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  body .highlight-listing {
+  body .highlight-listing .container {
     margin-top: -8%;
   }
 }
 
-body .highlight-listing h5 {
-  font-size: 18px;
-  font-weight: 400;
+body .highlight-listing .container h5 {
+  font-size: 20px;
+  font-weight: 500;
 }
 
-body .highlight-listing h1 {
+body .highlight-listing .container h1 {
   font-weight: 700;
   font-size: 48px;
   padding: 2% 0;
 }
 
 @media screen and (max-width: 768px) {
-  body .highlight-listing h1 {
+  body .highlight-listing .container h1 {
     font-size: 38px;
   }
 }
 
 @media screen and (max-width: 440px) {
-  body .highlight-listing h1 {
+  body .highlight-listing .container h1 {
     font-size: 30px;
   }
 }
 
-body .highlight-listing span {
-  font-size: 17px;
+body .highlight-listing .container span {
+  font-size: 18px;
   font-weight: 400;
   padding-bottom: .5%;
 }
 
-body .highlight-listing #price {
+body .highlight-listing .container #price {
   font-weight: 800;
 }
 
-body .highlight-listing a {
+body .highlight-listing .container a {
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -824,8 +840,328 @@ body .highlight-listing a {
   transition: 0.3s;
 }
 
-body .highlight-listing a:hover {
+body .highlight-listing .container a:hover {
   color: red;
   background: white;
+}
+
+body .site-options .container {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 6% 0 4%;
+}
+
+@media screen and (max-width: 1200px) {
+  body .site-options .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body .site-options .container {
+    width: 95%;
+  }
+}
+
+body .site-options .container .option {
+  height: 325px;
+  max-height: 325px;
+  width: 31%;
+  max-width: 31%;
+  position: relative;
+  background: lime;
+  margin-bottom: 2.5%;
+}
+
+@media screen and (max-width: 1200px) {
+  body .site-options .container .option {
+    height: 250px;
+    max-height: 250px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body .site-options .container .option {
+    width: 48%;
+    max-width: 48%;
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body .site-options .container .option {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+body .site-options .container .option .content {
+  position: absolute;
+  padding-top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  body .site-options .container .option .content {
+    padding-top: 22%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body .site-options .container .option .content {
+    padding-top: 30%;
+  }
+}
+
+body .site-options .container .option .content a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  body .site-options .container .option .content a {
+    font-size: 24px;
+  }
+}
+
+body .site-options .container .forsale-option {
+  background-image: url("../images/for-sale.jpg");
+  background-size: 100% 100%;
+}
+
+body .site-options .container .forsale-option .forsale-content {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body .site-options .container .forlease-option {
+  background-image: url("../images/for-lease.jpg");
+  background-size: 100% 100%;
+}
+
+body .site-options .container .forlease-option .forlease-content {
+  height: 100%;
+  background: rgba(255, 0, 0, 0.8);
+}
+
+body .site-options .container .sold-option {
+  background-image: url("../images/recently-sold.jpg");
+  background-size: 100% 100%;
+}
+
+body .site-options .container .sold-option .sold-content {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body .site-options .container .list-option {
+  background-image: url("../images/list-with-us.jpg");
+  background-size: 100% 100%;
+}
+
+body .site-options .container .list-option .list-content {
+  height: 100%;
+  background: rgba(255, 0, 0, 0.8);
+}
+
+body .site-options .container .development-option {
+  background-image: url("../images/new-development.jpg");
+  background-size: 100% 100%;
+}
+
+body .site-options .container .development-option .development-content {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body .site-options .container .offices-option {
+  background-image: url("../images/our-offices.jpg");
+  background-size: 100% 100%;
+}
+
+body .site-options .container .offices-option .offices-content {
+  height: 100%;
+  background: rgba(255, 0, 0, 0.8);
+}
+
+body .testimonial-section {
+  background-image: url("../images/bottom-sec.jpg");
+  background-size: 100% 85%;
+  background-repeat: no-repeat;
+}
+
+body .testimonial-section .container {
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 8% 3% 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body .testimonial-section .container h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  body .testimonial-section .container h1 {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body .testimonial-section .container h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .testimonial-section .container h1 {
+    font-size: 26px;
+  }
+}
+
+body .testimonial-section .container h3 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: rgba(255, 0, 0, 0.8);
+  padding: 2% 0;
+}
+
+@media screen and (max-width: 1000px) {
+  body .testimonial-section .container h3 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body .testimonial-section .container h3 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .testimonial-section .container h3 {
+    font-size: 20px;
+    padding: 4% 0;
+  }
+}
+
+body .testimonial-section .container .testimonials {
+  color: white;
+  background: black;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
+
+@media screen and (max-width: 1000px) {
+  body .testimonial-section .container .testimonials {
+    padding-bottom: 5%;
+  }
+}
+
+body .testimonial-section .container .testimonials .container {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3%;
+}
+
+@media screen and (max-width: 1000px) {
+  body .testimonial-section .container .testimonials .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 3% 3% 5% 3%;
+  }
+}
+
+body .testimonial-section .container .testimonials .container .review {
+  text-align: left;
+  padding: 0 2% 2%;
+}
+
+@media screen and (max-width: 1000px) {
+  body .testimonial-section .container .testimonials .container .review {
+    padding: 3%;
+  }
+}
+
+body .testimonial-section .container .testimonials .container .review p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding-bottom: 8%;
+}
+
+@media screen and (max-width: 1000px) {
+  body .testimonial-section .container .testimonials .container .review p {
+    padding-bottom: 4%;
+  }
+}
+
+body .testimonial-section .container .testimonials .container .review span {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+body .testimonial-section .container .testimonials a {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 1% 12%;
+  color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: 700;
+}
+
+body .testimonial-section .container .testimonials a:hover {
+  background: white;
+  color: red;
+}
+
+body .spacer {
+  padding: 3% 0;
+}
+
+body footer {
+  background: black;
+  text-align: center;
+  padding: 2% 0;
+}
+
+body footer h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */
