@@ -1,0 +1,758 @@
+/* Import the mixins collection file... */
+body {
+  position: relative;
+}
+
+body .header {
+  background: black;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3% 6%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header {
+    padding: 2.5% 11% 3%;
+  }
+}
+
+body .header .logo-section {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header .logo-section {
+    -webkit-box-flex: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4;
+    text-align: center;
+  }
+}
+
+body .header .logo-section img {
+  width: 300px;
+}
+
+@media screen and (max-width: 1024px) {
+  body .header .logo-section img {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  body .header .logo-section img {
+    width: 200px;
+  }
+}
+
+body .header .mobile-open {
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1124px) {
+  body .header .mobile-open {
+    display: block;
+  }
+}
+
+body .header .mobile-open a {
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 460px) {
+  body .header .mobile-open a {
+    font-size: 24px;
+  }
+}
+
+body .header .mobile-open a:hover {
+  color: red;
+}
+
+body .header .menu-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1124px) {
+  body .header .menu-section {
+    display: none;
+  }
+}
+
+body .header .menu-section .menu a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .header .menu-section .menu a:hover {
+  border-bottom: 1px solid red;
+  padding-bottom: 14px;
+}
+
+body .header .menu-section .menu .active {
+  border-bottom: 1px solid red;
+  padding-bottom: 14px;
+}
+
+body .header .menu-section .schedule {
+  padding-left: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1124px) {
+  body .header .menu-section .schedule {
+    display: none;
+  }
+}
+
+body .header .menu-section .schedule a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid white;
+  padding: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .header .menu-section .schedule a:hover {
+  background: white;
+  background-color: white;
+  color: red;
+}
+
+body .mobile-menu {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+body .mobile-menu .slide-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  height: 100vh;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  padding-top: 4%;
+  padding-bottom: 10%;
+}
+
+body .mobile-menu .slide-menu .closing {
+  padding-bottom: 18%;
+  padding-left: 6%;
+}
+
+body .mobile-menu .slide-menu .closing a {
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-left: 3%;
+}
+
+body .mobile-menu .slide-menu .closing a:hover {
+  color: red;
+}
+
+body .mobile-menu .slide-menu .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: spcae-between;
+      -ms-flex-pack: spcae-between;
+          justify-content: spcae-between;
+  padding-left: 9%;
+}
+
+body .mobile-menu .slide-menu .links a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .mobile-menu .slide-menu .links a:hover {
+  border-left: 1px solid red;
+  padding-left: 6%;
+}
+
+body .mobile-menu .slide-menu .links .active {
+  border-left: 1px solid red;
+  padding-left: 6%;
+}
+
+body .mobile-menu .slide-menu .schedule {
+  padding-top: 10%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+
+body .mobile-menu .slide-menu .schedule a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid white;
+  padding: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .mobile-menu .slide-menu .schedule a:hover {
+  background: white;
+  background-color: white;
+  color: red;
+}
+
+body .bg-img {
+  background-image: url("../images/exclusive-listings.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+body .bg-img .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 70vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+  body .bg-img .content {
+    padding: 0 18%;
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body .bg-img .content {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .bg-img .content {
+    height: 40vh;
+    padding: 0 8%;
+  }
+}
+
+body .bg-img .content h1 {
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: white;
+  padding: 3% 12%;
+  letter-spacing: -2px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 62px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1100px) {
+  body .bg-img .content h1 {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .bg-img .content h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .bg-img .content h1 {
+    font-size: 30px;
+  }
+}
+
+body .sale-property-section {
+  padding: 6% 0 1%;
+}
+
+body .sale-property-section .container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+body .sale-property-section .container .spacer {
+  width: 6%;
+  border-bottom: 3px solid red;
+}
+
+@media screen and (max-width: 1100px) {
+  body .sale-property-section .container .spacer {
+    width: 9%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body .sale-property-section .container .spacer {
+    width: 12%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body .sale-property-section .container .spacer {
+    width: 100%;
+  }
+}
+
+body .sale-property-section .container h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 46px;
+  font-weight: 700;
+  padding: 4% 0;
+}
+
+@media screen and (max-width: 860px) {
+  body .sale-property-section .container h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body .sale-property-section .container h1 {
+    font-size: 28px;
+    text-align: center;
+    padding: 6%;
+  }
+}
+
+body .sale-property-section .container .sale-properties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body .sale-property-section .container .sale-properties .property {
+  width: 26%;
+  text-align: center;
+  padding-bottom: 6%;
+}
+
+@media screen and (max-width: 900px) {
+  body .sale-property-section .container .sale-properties .property {
+    width: 40%;
+    padding-bottom: 8%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .sale-property-section .container .sale-properties .property {
+    width: 100%;
+    padding-bottom: 13%;
+  }
+}
+
+body .sale-property-section .container .sale-properties .property img {
+  width: 100%;
+  height: 335px;
+}
+
+@media screen and (max-width: 1020px) {
+  body .sale-property-section .container .sale-properties .property img {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  body .sale-property-section .container .sale-properties .property img {
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body .sale-property-section .container .sale-properties .property img {
+    height: 250px;
+  }
+}
+
+body .sale-property-section .container .sale-properties .property h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 8% 0 7%;
+}
+
+@media screen and (max-width: 1280px) {
+  body .sale-property-section .container .sale-properties .property h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body .sale-property-section .container .sale-properties .property h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  body .sale-property-section .container .sale-properties .property h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .sale-property-section .container .sale-properties .property h3 {
+    font-size: 32px;
+    padding: 4% 0 3%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body .sale-property-section .container .sale-properties .property h3 {
+    padding: 6% 0 5%;
+    font-size: 25px;
+  }
+}
+
+body .sale-property-section .container .sale-properties .property p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 950px) {
+  body .sale-property-section .container .sale-properties .property p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .sale-property-section .container .sale-properties .property p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body .sale-property-section .container .sale-properties .property p {
+    font-size: 17px;
+  }
+}
+
+body .sale-property-section .container .sale-properties .property .layout {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 3% 0 8%;
+}
+
+@media screen and (max-width: 950px) {
+  body .sale-property-section .container .sale-properties .property .layout {
+    font-size: 13px;
+    padding: 6% 0 12%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .sale-property-section .container .sale-properties .property .layout {
+    font-size: 17px;
+    padding: 4% 0 8%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body .sale-property-section .container .sale-properties .property .layout {
+    padding: 4% 0 8%;
+    font-size: 16px;
+  }
+}
+
+body .sale-property-section .container .sale-properties .property a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 2% 26%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1280px) {
+  body .sale-property-section .container .sale-properties .property a {
+    padding: 2% 20%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  body .sale-property-section .container .sale-properties .property a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .sale-property-section .container .sale-properties .property a {
+    font-size: 18px;
+  }
+}
+
+body .sale-property-section .container .sale-properties .property a:hover {
+  background: black;
+  color: white;
+}
+
+body .escher-plaza {
+  background-image: url("../images/escher-plaza.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6% 0 6% 10%;
+}
+
+@media screen and (max-width: 1200px) {
+  body .escher-plaza {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body .escher-plaza {
+    padding: 6%;
+  }
+}
+
+body .escher-plaza .info {
+  width: 33%;
+  background: #ffffff;
+  padding: 2% 3% 3%;
+}
+
+@media screen and (max-width: 1200px) {
+  body .escher-plaza .info {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body .escher-plaza .info {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body .escher-plaza .info {
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body .escher-plaza .info h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 2% 0;
+}
+
+@media screen and (max-width: 880px) {
+  body .escher-plaza .info h3 {
+    font-size: 28px;
+    padding: 2% 0 1%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body .escher-plaza .info h3 {
+    font-size: 24px;
+  }
+}
+
+body .escher-plaza .info h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 2% 0;
+}
+
+body .escher-plaza .info p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 2% 0 4%;
+}
+
+@media screen and (max-width: 1200px) {
+  body .escher-plaza .info p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body .escher-plaza .info p {
+    font-size: 17px;
+    padding-bottom: 1%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body .escher-plaza .info p {
+    font-size: 16px;
+  }
+}
+
+body .escher-plaza .info #layout {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+  padding-bottom: 9%;
+  letter-spacing: -1px;
+}
+
+@media screen and (max-width: 880px) {
+  body .escher-plaza .info #layout {
+    font-size: 16px;
+    padding-bottom: 6%;
+  }
+}
+
+body .escher-plaza .info a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  border: 1px solid black;
+  padding: 2.5% 20%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 880px) {
+  body .escher-plaza .info a {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+body .escher-plaza .info a:hover {
+  background: black;
+  color: white;
+}
+
+body footer {
+  background: black;
+  text-align: center;
+  padding: 2% 0;
+}
+
+body footer h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+/*# sourceMappingURL=listing.css.map */
